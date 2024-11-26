@@ -3,6 +3,12 @@
 In our [paper](https://asmp-eurasipjournals.springeropen.com/articles/10.1186/s13636-024-00333-x),we propose a new approach that parameterizes GPs using a deep neural network based on Neural Processes (NPs) to reconstruct the sound field. This method has the advantage of dynamically learning
 kernels from simulated data using an attention mechanism, allowing for greater flexibility and adaptability to the acoustic properties of the sound field.
 
+## Requirements
+```
+torch==1.13.1+cu100
+python==3.9.13
+```
+
 ## Data Preparation
 For training, we used 10,000 rooms and placed a variable number of microphones on a 32-by-32 grid within the frequency range of [30,500] Hz, which was evenly divided into 40 frequency bins. The dataset has the dimensions of [10000, 32, 32, 40].
 
