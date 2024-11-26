@@ -5,6 +5,7 @@ kernels from simulated data using an attention mechanism, allowing for greater f
 
 ## Data Preparation
 For training, we used 10,000 rooms and placed a variable number of microphones on a 32-by-32 grid within the frequency range of [30,500] Hz, which was evenly divided into 40 frequency bins. The dataset has the dimensions of [10000, 32, 32, 40].
+
 For inference, the dataset has the dimensions of [1000, 32, 32, 40].
 
 ## Training
