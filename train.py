@@ -48,12 +48,6 @@ def np_loss(y_hat, y, post_mu, post_var, prior_mu, prior_var):
 
 
 def adjust_learning_rate(optimizer, step_num, warmup_step=1500):
-    lr = 0.001 * warmup_step**0.5 * min(step_num * warmup_step**-1.5, step_num**-0.5)
-    for param_group in optimizer.param_groups:
-        param_group['lr'] = lr
-
-
-def adjust_learning_rate(optimizer, step_num, warmup_step=1500):
     if step_num < warmup_step:
         lr = 0.001 * warmup_step**0.5 * min(step_num * warmup_step**-1.5, step_num**-0.5)
     elif step_num < 16000:
